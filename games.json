@@ -1,51 +1,51 @@
 [
     {
         "name": "1v1-lol",
-        "image": "https://unblockgamez.github.io/images/1v1-lol.png",
+        "image": "1v1-lol.png",
         "popularity": 100,
         "date": "2025-01-10",
-        "url": "https://unblockgamez.github.io/play/1v1-lol.html"
+        "url": "1v1-lol.html"
     },
     {
         "name": "Basketball Stars",
-        "image": "https://unblockgamez.github.io/images/basketball-stars.webp",
+        "image": "basketball-stars.webp",
         "popularity": 150,
         "date": "2025-01-15",
-        "url": "https://unblockgamez.github.io/play/basketball-stars.html"
+        "url": "basketball-stars.html"
     },
     {
         "name": "Cookie Clicker",
-        "image": "https://unblockgamez.github.io/images/Cookie-Clicker.png",
+        "image": "Cookie-Clicker.png",
         "popularity": 90,
         "date": "2025-01-12",
-        "url": "https://unblockgamez.github.io/play/cookie-clicker.html"
+        "url": "cookie-clicker.html"
     },
     {
         "name": "Drift Hunters",
-        "image": "https://unblockgamez.github.io/images/drift-hunters.png",
+        "image": "drift-hunters.png",
         "popularity": 90,
         "date": "2025-01-12",
-        "url": "https://unblockgamez.github.io/play/drift-hunters.html"
+        "url": "drift-hunters.html"
     },
     {
         "name": "Geometry Dash",
-        "image": "https://unblockgamez.github.io/images/Geometry-dash.jpg",
+        "image": "Geometry-dash.jpg",
         "popularity": 90,
         "date": "2025-01-12",
-        "url": "https://unblockgamez.github.io/play/geometry-dash.html"
+        "url": "geometry-dash.html"
     },
     {
         "name": "Retro Bowl",
-        "image": "https://unblockgamez.github.io/images/Retro-bowl.webp",
+        "image": "Retro-bowl.webp",
         "popularity": 90,
         "date": "2025-01-12",
-        "url": "https://unblockgamez.github.io/play/retro-bowl.html"
+        "url": "retro-bowl.html"
     },
     {
         "name": "Snow Rider 3D",
-        "image": "https://unblockgamez.github.io/images/images/Snow-Rider-3D.jpg",
+        "image": "images/Snow-Rider-3D.jpg",
         "popularity": 90,
         "date": "2025-01-12",
-        "url": "https://unblockgamez.github.io/play/snowrider3d.html"
+        "url": "snowrider3d.html"
     }
 ]

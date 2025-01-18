@@ -24,7 +24,7 @@ async function displayRecentGames() {
                 <div class="game-item">
                     <div class="list-game">
                         <div class="list-thumbnail">
-                            <img src="${game.image}" class="lazyload" alt="${game.name}" title="${game.name} Unblocked">
+                            <img src="https://raw.githubusercontent.com/unblockgamez/unblockgamez.github.io/refs/heads/main/images/${game.image}" class="lazyload" alt="${game.name}" title="${game.name} Unblocked">
                             <div class="list-title" style="text-align:center;">${game.name}</div>
                         </div>
                     </div>
