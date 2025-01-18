@@ -1,12 +1,5 @@
 # Syntax highlighting
 highlighter:         pygments
-
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
-
 # Setup
 title: "Unblocked Games"
 description: "Play a wide range of unblocked games online. Enjoy an ad-free experience."
