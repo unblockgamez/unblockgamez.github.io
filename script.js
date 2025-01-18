@@ -20,7 +20,7 @@ async function displayRecentGames() {
         const gameElement = document.createElement('div');
         gameElement.className = 'col-lg-2 col-md-4 col-6 grid-3';
         gameElement.innerHTML = `
-            <a href="/play/${game.name.toLowerCase().replace(/ /g, '-')}.html">
+            <a href="${game.url}">
                 <div class="game-item">
                     <div class="list-game">
                         <div class="list-thumbnail">
