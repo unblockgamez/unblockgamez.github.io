@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game List</title>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="vex_x">
+      <div style="text-align: justify; margin: 10px;">
+        <h3 class="section-title">Popular games</h3>
+        <div class="row grid-container" id="game-list">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Load the JSON file and generate the game list
+    fetch('games.json')
+      .then(response => response.json())
+      .then(data => {
+        const gameList = document.getElementById('game-list');
+        data.forEach(game => {
+          const gameItem = document.createElement('div');
+          gameItem.className = 'col-lg-2 col-md-4 col-6 grid-3';
+
+          const gameLink = document.createElement('a');
+          gameLink.href = game.url;
+
+          const gameDiv = document.createElement('div');
+          gameDiv.className = 'game-item';
+
+          const listGame = document.createElement('div');
+          listGame.className = 'list-game';
+
+          const listThumbnail = document.createElement('div');
+          listThumbnail.className = 'list-thumbnail';
+
+          const gameImage = document.createElement('img');
+          gameImage.src = game.image;
+          gameImage.alt = game.name;
+          gameImage.title = game.title;
+          gameImage.classList.add('lazyload');
+
+          const listTitle = document.createElement('div');
+          listTitle.className = 'list-title';
+          listTitle.textContent = game.name;
+
+          listThumbnail.appendChild(gameImage);
+          listThumbnail.appendChild(listTitle);
+          listGame.appendChild(listThumbnail);
+          gameDiv.appendChild(listGame);
+          gameLink.appendChild(gameDiv);
+          gameItem.appendChild(gameLink);
+          gameList.appendChild(gameItem);
+        });
+      })
+      .catch(error => console.error('Error loading games:', error));
+  </script>
+</body>
+</html>
