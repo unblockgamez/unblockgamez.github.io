@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unblocked Gamez - Blogs</title>
+layout: default
+title: "Top 10 Unblocked Games for School in 2025"
   {% include header.html %}
 </head>
 <body>
