@@ -69,29 +69,29 @@
 </script>
 <div class="row">
       <div class="col-md-9">
-            <div class="game-container">
-              <div class="game-content" data-id="169">
-                <div id="allow_mobile_version"></div>    
-                <div class="game-iframe-container" id="game-player">
-                  <div id="mobile-back-button" draggable="true">
-                    <i class="bi bi-x-circle-fill"></i>
-                  </div>
-                  <iframe class="game-iframe" id="game-area" src="https://unblocked6xgames.com/1v1-lol" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
-                </div>
+        <div class="gamer-container">
+          <!-- Ad Overlay -->
+          <div class="game-overlay">
+              <div class="game-ad">
+                <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle_direct.js?
+                client=ca-pub-6776922497675532" crossorigin="anonymous">
+           </script>
+           <ins class="adsbygoogle"
+                style="display:inline-block;width:300px;height:250px"
+                data-ad-client="ca-pub-6776922497675532"
+                /* 300x250-1 */
+                data-ad-slot="300x250-1"
+                data-tag-src="gamtg">
+           </ins>
+           <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+           </script>
               </div>
-
-              <div class="game-info">
-                <div class="header-left">
-                  <h1 class="single-title">1v1.lol Unblocked</h1>
-                </div>
-                <div class="header-right">
-
-                  <div class="b-action2">              
-                    <a href="#" onclick="open_fullscreen()" class="btn btn-capsule"><i class="bi bi-arrows-fullscreen b-icon"></i>Fullscreen</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <button id="gamePlayButton">Play Game</button>
+          </div>
+        <iframe class="game-iframe" id="game-area" src="https://unblocked6xgames.com/1v1-lol" style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
+      </div>
 </div><!-- end col-9 -->
       
 <!-- hot game -->
@@ -262,6 +262,19 @@ data-ad-slot="9611781654"></ins>
       
   </div>
 </div>
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to the play button
+    document.getElementById('gamePlayButton').addEventListener('click', function() {
+      // Hide the overlay
+      document.querySelector('.game-overlay').style.display = 'none';
+
+      // Show the iframe
+      document.getElementById('game-area').style.display = 'block';
+    });
+  });
+</script>
 <script type="text/javascript" src="../js/script.js"></script>
   </body>
 </html>

@@ -376,11 +376,3 @@ function show_leaderboard(data){
 		});
 	}
 })();
-// script.js
-document.getElementById('gamePlayButton').addEventListener('click', function() {
-    // Hide the overlay
-    document.querySelector('.game-overlay').style.display = 'none';
-
-    // Show the iframe
-    document.getElementById('game-area').style.display = 'block';
-});
