@@ -44,9 +44,8 @@ header {
     flex: 2;
 }
 .sidebar {
-    flex: 1;
     background: #f4f4f4;
-    padding: 15px;
+    padding: 5px;
 }
 .blog-post {
     margin-bottom: 20px;
@@ -155,4 +154,7 @@ ul li {
     background: #3498db;
     color: white;
     padding: 10px 15px
+}
+.sticky-ad {
+    position: sticky;
 }
