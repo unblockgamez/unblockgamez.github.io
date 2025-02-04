@@ -377,10 +377,10 @@ function show_leaderboard(data){
 	}
 })();
 // script.js
-document.getElementById('playButton').addEventListener('click', function() {
+document.getElementById('gamePlayButton').addEventListener('click', function() {
     // Hide the overlay
-    document.querySelector('.overlay').style.display = 'none';
+    document.querySelector('.game-overlay').style.display = 'none';
 
     // Show the iframe
-    document.getElementById('gameFrame').style.display = 'block';
+    document.getElementById('game-area').style.display = 'block';
 });
