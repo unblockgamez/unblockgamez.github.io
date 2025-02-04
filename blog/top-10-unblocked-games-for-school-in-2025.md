@@ -1,6 +1,6 @@
 ---
 layout: main
-title: "Unblocked Gamez - Blogs"
+title: "Top 10 Unblocked Games for School 2024"
 ---
 
     {% include header.html %}
