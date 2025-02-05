@@ -760,7 +760,10 @@ input.form-control {
   align-items: center;
   background-color: #000;
 }
-
+.ad-container {
+  background: #FAF9F6;
+  border-radius: 5px;
+}
 .game-overlay {
   position: absolute;
   top: 50%;
