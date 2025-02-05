@@ -1,0 +1,38 @@
+[
+    {
+      "name": "1v1 Lol",
+      "url": "/play/1v1-lol.html",
+      "image": "images/1v1-lol.png"
+    },
+    {
+      "name": "Basketball Stars",
+      "url": "/play/basketball-stars.html",
+      "image": "images/basketball-stars.webp"
+    },
+    {
+      "name": "Cookie Clicker",
+      "url": "/play/cookie-clicker.html",
+      "image": "images/Cookie-Clicker.png"
+    },
+    {
+      "name": "Drift Hunters",
+      "url": "/play/drift-hunters.html",
+      "image": "images/drift-hunters.png"
+    },
+    {
+      "name": "Geometry Dash",
+      "url": "/play/geometry-dash.html",
+      "image": "images/Geometry-dash.jpg"
+    },
+    {
+      "name": "Retro Bowl",
+      "url": "/play/retro-bowl.html",
+      "image": "images/Retro-bowl.webp"
+    },
+    {
+      "name": "Snow Rider 3D",
+      "url": "/play/snowrider3d.html",
+      "image": "images/Snow-Rider-3D.jpg"
+    }
+  ]
+  

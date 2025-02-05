@@ -58,96 +58,8 @@
 <div class="vex_x">
 <div style="text-align: justify; margin: 10px 10px 10px 10px;" >
 <h3 class="section-title">Popular games</h3>
-<div class="row grid-container" style="margin-left: 6px; margin-right: 6px;">
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/1v1-lol.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="images/1v1-lol.png" class="lazyload" alt="1v1-lol" title="1v1 lol Unblocked">
-        <div class="list-title" style="text-align:center;">1v1-lol</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/basketball-stars.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="images/basketball-stars.webp" class="lazyload" alt="Basketball-Stars" title="Basketball-Stars Unblocked">
-        <div class="list-title" style="text-align:center;">Basketball Stars</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/cookie-clicker.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="images/Cookie-Clicker.png" class="lazyload" alt="Cookie Clicker" title="Cookie Clicker Unblocked">
-        <div class="list-title" style="text-align:center;">Cookie Clicker</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/drift-hunters.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="images/drift-hunters.png" class="lazyload" alt="Drift Hunters" title="Drift Hunters Unblocked">
-        <div class="list-title" style="text-align:center;">Drift Hunters</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/geometry-dash.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="images/Geometry-dash.jpg" class="lazyload" alt="Geometry Dash" title="Geometry Dash Unblocked">
-        <div class="list-title" style="text-align:center;">Geometry Dash</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/retro-bowl.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="images/Retro-bowl.webp" class="lazyload" alt="Retro Bowl" title="Retro Bowl Unblocked">
-        <div class="list-title" style="text-align:center;">Retro Bowl</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/snowrider3d.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="images/Snow-Rider-3D.jpg" class="lazyload" alt="Snow Rider 3D" title="Snow Rider 3D unblocked">
-        <div class="list-title" style="text-align:center;">Snow Rider 3D</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>
-
+<div class="row grid-container" id="game-list">
+  <!-- Games will be loaded here -->
 </div>
 </div>
 </div> <!-- end New -->
@@ -169,5 +81,34 @@
   </div>
 </div>
 <script type="text/javascript" src="js/script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+	fetch("games.json") // Load the JSON file
+		.then(response => response.json())
+		.then(games => {
+			const container = document.getElementById("game-list");
+			container.innerHTML = ""; // Clear existing content
+
+			games.forEach(game => {
+				const gameHTML = `
+					<div class="col-lg-2 col-md-4 col-6 grid-3">
+					  <a href="${game.url}">
+						<div class="game-item">
+						  <div class="list-game">
+							<div class="list-thumbnail">
+							  <img src="${game.image}" class="lazyload" alt="${game.name}" title="${game.name} Unblocked">
+							  <div class="list-title" style="text-align:center;">${game.name}</div>
+							</div>
+						  </div>
+						</div>
+					  </a>
+					</div>
+				`;
+				container.innerHTML += gameHTML;
+			});
+		})
+		.catch(error => console.error("Error loading games:", error));
+});
+</script>
   </body>
 </html>
