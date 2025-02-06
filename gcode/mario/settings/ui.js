@@ -162,12 +162,12 @@ FullScreenMario.FullScreenMario.settings.ui = {
     "sizes": {
         "NES": {
             "width": 512,
-            "height": 464,
+            "height": 664,
             "full": false
         },
         "Wide": {
             "width": Infinity,
-            "height": 464,
+            "height": 664,
             "full": false
         },
         "Large": {
