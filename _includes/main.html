@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css"> <!-- Adjust CSS path if needed -->
+</head>
+<body>
+
+    {% include header.html %}  <!-- Include a common header -->
+
+    <main>
+        {{ content }}  <!-- This injects the content from each page -->
+    </main>
+
+    {% include footer.html %}  <!-- Include a common footer -->
+
+</body>
+</html>
