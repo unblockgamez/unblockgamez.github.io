@@ -1,0 +1,53 @@
+<div class="footer-copyright py-4">
+    <div class="container">
+       Unblockgamez    
+       <span class="dsb-panel">
+       <a href="/policy.html">Privacy Policy</a> |
+       <a href="/term.html">Terms of Use</a> |
+       <a href="/contact.html">Contact us</a>
+       </span>
+    </div>
+ </div>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("../games.json") // Fetch JSON file
+            .then(response => response.json())
+            .then(games => {
+                const container = document.getElementById("games-container");
+                container.innerHTML = ""; // Clear existing content
+
+                games.slice(0, 6).forEach(game => { // Load only the first 6 games
+                    const gameHTML = `
+                        <div class="col-lg-2 col-md-4 col-6 grid-3">
+                            <a href="${game.url}">
+                                <div class="game-item">
+                                    <div class="list-game">
+                                        <div class="list-thumbnail">
+                                            <img src="${game.image}" class="lazyload" alt="${game.name}" title="${game.name} Unblocked">
+                                            <div class="list-title" style="text-align:center;">${game.name}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                    container.innerHTML += gameHTML;
+                });
+            })
+            .catch(error => console.error("Error loading games:", error));
+    });
+</script>
+<script>
+ // Wait for the DOM to be fully loaded
+ document.addEventListener('DOMContentLoaded', function() {
+   // Add event listener to the play button
+   document.getElementById('gamePlayButton').addEventListener('click', function() {
+     // Hide the overlay
+     document.querySelector('.game-overlay').style.display = 'none';
+
+     // Show the iframe
+     document.getElementById('game-area').style.display = 'block';
+   });
+ });
+</script>
+ <script type="text/javascript" src="../js/script.js"></script>

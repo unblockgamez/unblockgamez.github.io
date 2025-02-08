@@ -101,3 +101,24 @@ function drag_back_btn(elem) {
 		}
 	}, false);
 }
+function open_fullscreen(event) {
+	event.preventDefault(); // Prevent default anchor action
+	var iframe = document.getElementById("game-area");
+	
+	if (iframe.requestFullscreen) {
+		iframe.requestFullscreen();
+	} else if (iframe.mozRequestFullScreen) { // Firefox
+		iframe.mozRequestFullScreen();
+	} else if (iframe.webkitRequestFullscreen) { // Chrome, Safari & Opera
+		iframe.webkitRequestFullscreen();
+	} else if (iframe.msRequestFullscreen) { // IE/Edge
+		iframe.msRequestFullscreen();
+	}
+}
+
+document.getElementById("gamePlayButton").addEventListener("click", function() {
+	var iframe = document.getElementById("game-area");
+	iframe.style.display = "block";
+	this.style.display = "none"; // Hide play button after clicking
+	document.querySelector(".game-overlay").style.display = "none"; // Hide overlay
+});
