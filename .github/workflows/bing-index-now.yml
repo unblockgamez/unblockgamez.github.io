@@ -1,0 +1,44 @@
+name: Submit URLs to Bing Index Now
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
+
+jobs:
+  submit-urls:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Submit URLs to Bing Index Now
+      run: |
+        # Replace with your API key and URLs
+        API_KEY="9918d9663c234654906b57ae405eadb4"
+        URLS=(
+          "https://unblockgamez.github.io"
+          "https://unblockgamez.github.io/play/subway-surfers-unblocked.html"
+          "https://unblockgamez.github.io/play/Wordle-unlimited-unblocked.html"
+          "https://unblockgamez.github.io/play/1v1-lol.html"
+          "https://unblockgamez.github.io/play/basketball-stars.html"
+          "https://unblockgamez.github.io/play/cookie-clicker.html"
+          "https://unblockgamez.github.io/play/drift-hunters.html"
+          "https://unblockgamez.github.io/play/geometry-dash.html"
+          "https://unblockgamez.github.io/play/retro-bowl.html"
+          "https://unblockgamez.github.io/play/snowrider3d.html"
+
+        )
+
+        for URL in "${URLS[@]}"; do
+          curl -X POST "https://www.bing.com/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"yourwebsite.com\",
+              \"key\": \"$API_KEY\",
+              \"urlList\": [\"$URL\"]
+            }"
+        done
