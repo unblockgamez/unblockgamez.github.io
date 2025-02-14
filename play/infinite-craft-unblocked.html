@@ -13,17 +13,27 @@ imageurl: "../images/infinite-craft-unblocked.webp"
            <div class="row">
               <!-- Main Game Section (col-md-9) -->
               <div class="col-md-9">
-                 <div class="gamer-container">
-                    <!-- Ad Overlay -->
-                    <div class="game-overlay">
-                       <div class="game-ad">
-                          {% include ad_s7.html %}
-                       </div>
-                       <button id="gamePlayButton">Play Game</button>
+               <div class="gamer-container">
+                  <!-- Ad Overlay -->
+                  <div class="game-overlay">
+                     <div class="game-ad">
+                        {% include ad_s7.html %}
+                     </div>
+                     <button id="gamePlayButton">Play Game</button>
+                  </div>
+                   <!-- Left Ad -->
+                    <div class="ad-side left" id="ad-left">
+                        <button class="close-btn" onclick="hideAd('ad-left')">×</button>
+                        {% include iframe_side01.html %}
                     </div>
-                    <iframe class="game-iframe" id="game-area" src="https://unblockgamez.github.io/gcode/inf-crt/index.html" 
-                       style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-                 </div>
+                    <div class="ad-side right" id="ad-right">
+                        <button class="close-btn" onclick="hideAd()">×</button>
+                        {% include iframe_side02.html %}
+                    </div>
+
+                  <iframe class="game-iframe iframe-container" id="game-area" src="https://unblockgamez.github.io/gcode/inf-crt/index.html" 
+                     style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+               </div>
                  <div class="game-info">
                     <div class="header-left">
                         <h1 class="single-title">Infinite Craft Unblocked</h1>
@@ -59,6 +69,7 @@ imageurl: "../images/infinite-craft-unblocked.webp"
               <div class="post-media">
                  <div class="post-body">
                     <div class="post-intro" style="font-size: x-large; text-align:justify">
+                     {% include ad_s1.html %}
                        <h2>Infinite Craft Unblocked – Create Without Limits!</h2>
                        <p>Let your imagination run wild in <strong>Infinite Craft Unblocked</strong>, a sandbox crafting game where you can combine elements to create endless new items. Experiment with different combinations and unlock surprising discoveries in this addictive and unblocked game!</p>
      
@@ -79,7 +90,7 @@ imageurl: "../images/infinite-craft-unblocked.webp"
                           <li>Keep crafting and discover unique and unexpected items.</li>
                           <li>Challenge yourself to find all possible creations!</li>
                        </ol>
-     
+                       {% include ad_s2.html %}
                        <p>Enjoy limitless crafting possibilities with <strong>Infinite Craft Unblocked</strong>. Play now and see how many unique combinations you can create!</p>
                     </div>
                  </div>

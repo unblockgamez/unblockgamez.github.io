@@ -13,17 +13,27 @@ imageurl: "../images/moto-x3m-unblocked.webp"
            <div class="row">
               <!-- Main Game Section (col-md-9) -->
               <div class="col-md-9">
-                 <div class="gamer-container">
-                    <!-- Ad Overlay -->
-                    <div class="game-overlay">
-                       <div class="game-ad">
-                          {% include ad_s7.html %}
-                       </div>
-                       <button id="gamePlayButton">Play Game</button>
+               <div class="gamer-container">
+                  <!-- Ad Overlay -->
+                  <div class="game-overlay">
+                     <div class="game-ad">
+                        {% include ad_s7.html %}
+                     </div>
+                     <button id="gamePlayButton">Play Game</button>
+                  </div>
+                   <!-- Left Ad -->
+                    <div class="ad-side left" id="ad-left">
+                        <button class="close-btn" onclick="hideAd('ad-left')">×</button>
+                        {% include iframe_side01.html %}
                     </div>
-                    <iframe class="game-iframe" id="game-area" src="https://unblockgamez.github.io/gcode/mx3m/index.html" 
-                       style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-                 </div>
+                    <div class="ad-side right" id="ad-right">
+                        <button class="close-btn" onclick="hideAd()">×</button>
+                        {% include iframe_side02.html %}
+                    </div>
+
+                  <iframe class="game-iframe iframe-container" id="game-area" src="https://unblockgamez.github.io/gcode/mx3m/index.html" 
+                     style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+               </div>
                  <div class="game-info">
                     <div class="header-left">
                         <h1 class="single-title">Moto X3M Unblocked</h1>
@@ -60,7 +70,7 @@ imageurl: "../images/moto-x3m-unblocked.webp"
                  <div class="post-body">
                     <div class="post-intro" style="text-align:justify">
                         <h2>Moto X3M Unblocked – Extreme Bike Racing Fun!</h2>
-
+                        {% include ad_s1.html %}
 <p>Get ready for high-speed motocross action in <strong>Moto X3M Unblocked</strong>. This adrenaline-pumping bike racing game features intense levels with insane stunts, tricky obstacles, and explosive action. Play now and test your skills on dangerous tracks!</p>
 
 <h3>Features of Moto X3M Unblocked</h3>
@@ -82,7 +92,7 @@ imageurl: "../images/moto-x3m-unblocked.webp"
 </ol>
 
 <p>Experience the thrill of extreme racing in <strong>Moto X3M Unblocked</strong>. Play now and conquer the most challenging tracks!</p>
-
+{% include ad_s2.html %}
                     </div>
                  </div>
               </div>

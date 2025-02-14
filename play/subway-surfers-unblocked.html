@@ -14,17 +14,27 @@ imageurl: "../images/Subway-Surfers-Unblocked-icon.webp"
          <div class="row">
             <!-- Main Game Section (col-md-9) -->
             <div class="col-md-9">
-               <div class="gamer-container">
-                  <!-- Ad Overlay -->
-                  <div class="game-overlay">
-                     <div class="game-ad">
-                        {% include ad_s7.html %}
-                     </div>
-                     <button id="gamePlayButton">Play Game</button>
-                  </div>
-                  <iframe class="game-iframe" id="game-area" src="https://unblockgamez.github.io/gcode/sub-s-ny/index.html" 
-                     style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-               </div>
+                <div class="gamer-container">
+                    <!-- Ad Overlay -->
+                    <div class="game-overlay">
+                       <div class="game-ad">
+                          {% include ad_s7.html %}
+                       </div>
+                       <button id="gamePlayButton">Play Game</button>
+                    </div>
+                     <!-- Left Ad -->
+                      <div class="ad-side left" id="ad-left">
+                          <button class="close-btn" onclick="hideAd('ad-left')">×</button>
+                          {% include iframe_side01.html %}
+                      </div>
+                      <div class="ad-side right" id="ad-right">
+                          <button class="close-btn" onclick="hideAd()">×</button>
+                          {% include iframe_side02.html %}
+                      </div>
+  
+                    <iframe class="game-iframe iframe-container" id="game-area" src="https://unblockgamez.github.io/gcode/sub-s-ny/index.html" 
+                       style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+                 </div>
                <div class="game-info">
                   <div class="header-left">
                       <h1 class="single-title">Subway Surfers Unblocked</h1>
@@ -53,6 +63,7 @@ imageurl: "../images/Subway-Surfers-Unblocked-icon.webp"
                </div>
            </div>
             <!-- end New -->
+            {% include ad_s1.html %}
             <div style="padding-top: 20px;"  class="post-item">
                <div class="post-media">
                   <div class="post-body">
@@ -79,7 +90,7 @@ imageurl: "../images/Subway-Surfers-Unblocked-icon.webp"
     <li>Grab power-ups like jetpacks and magnets for extra points.</li>
     <li>Keep running and set a high score before getting caught!</li>
 </ol>
-
+{% include ad_s2.html %}
 <p>Experience the thrill of <strong>Subway Surfers Unblocked</strong> and test your reflexes in this addictive endless runner. Start playing now and challenge yourself to beat the highest scores!</p>
 
                       </div>

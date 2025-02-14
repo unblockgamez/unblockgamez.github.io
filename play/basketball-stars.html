@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -76,7 +78,16 @@
                   <div id="mobile-back-button" draggable="true">
                     <i class="bi bi-x-circle-fill"></i>
                   </div>
-                  <iframe class="game-iframe" id="game-area" src="https://unblocked6xgames.com/Basketball-Stars-Unblocked" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
+                  <!-- Left Ad -->
+                  <div class="ad-side left" id="ad-left">
+                    <button class="close-btn" onclick="hideAd('ad-left')">×</button>
+                    {% include iframe_side01.html %}
+                </div>
+                <div class="ad-side right" id="ad-right">
+                    <button class="close-btn" onclick="hideAd()">×</button>
+                    {% include iframe_side02.html %}
+                </div>
+                  <iframe class="game-iframe iframe-container" id="game-area" src="https://unblocked6xgames.com/Basketball-Stars-Unblocked" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
                 </div>
               </div>
 
@@ -205,6 +216,7 @@ data-ad-slot="9611781654"></ins>
            <div class="post-intro"> 
             <section>
               <h2>What Is Basketball Stars Unblocked?</h2>
+              {% include ad_s1.html %}
               <p>
                   <strong>Basketball Stars Unblocked</strong> is an exciting online basketball game where players can showcase their skills in intense one-on-one or two-player matches. Known for its smooth gameplay and impressive graphics, this game offers a fun and competitive environment for basketball enthusiasts. Whether you're shooting hoops, blocking shots, or performing slam dunks, Basketball Stars guarantees hours of engaging entertainment.
               </p>
@@ -223,6 +235,7 @@ data-ad-slot="9611781654"></ins>
               <p>
                   If you're looking for a thrilling basketball game that you can play anywhere, <strong>Basketball Stars Unblocked</strong> is the perfect choice. Test your skills, outplay your opponents, and dominate the court in this fast-paced basketball extravaganza. Grab your virtual basketball and start playing now to become a true basketball star!
               </p>
+              {% include ad_s2.html %}
           </section>
 
 </div>
@@ -237,18 +250,6 @@ data-ad-slot="9611781654"></ins>
 </div>
 </div> <!-- end container -->
 
-
-<div class="footer-copyright py-4">
-  <div class="container">
-    Unblockgamez    
-      <span class="dsb-panel">
-        <a href="/policy.html">Privacy Policy</a> |
-        <a href="/term.html">Terms of Use</a> |
-        <a href="/contact.html">Contact us</a>
-      </span>
-      
-  </div>
-</div>
-<script type="text/javascript" src="../js/script.js"></script>
+{% include footer.html %}  
   </body>
 </html>

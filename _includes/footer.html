@@ -50,4 +50,43 @@
    });
  });
 </script>
+<script>
+    let adIntervals = {
+        'ad-top': 30000, // Starts with 30s delay after closing
+        'ad-left': 30000,
+        'ad-right': 30000
+    };
+
+    function showAds() {
+        document.getElementById('ad-left').style.display = 'block';
+        document.getElementById('ad-right').style.display = 'block';
+        reloadAds();
+    }
+
+    function hideAd(adId) {
+        document.getElementById(adId).style.display = 'none';
+        
+        // Increase interval time for next appearance (adds 10s each time)
+        adIntervals[adId] += 10000;
+
+        // Show the ad again after the updated interval
+        setTimeout(() => {
+            document.getElementById(adId).style.display = 'block';
+            reloadAd(adId);
+        }, adIntervals[adId]);
+    }
+
+    function reloadAds() {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+
+    function reloadAd(adId) {
+        let ad = document.getElementById(adId).querySelector("ins");
+        ad.innerHTML = ""; // Clear existing ad
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+
+    // Show ads after 5 seconds on page load
+    setTimeout(showAds, 5000);
+</script>
  <script type="text/javascript" src="../js/script.js"></script>

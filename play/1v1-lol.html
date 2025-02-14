@@ -22,7 +22,17 @@ imageurl: ":https://unblockgamez.github.io/play/images/1v1-lol.png"
                      </div>
                      <button id="gamePlayButton">Play Game</button>
                   </div>
-                  <iframe class="game-iframe" id="game-area" src="https://unblockgamez.github.io/1ubl" 
+                   <!-- Left Ad -->
+                    <div class="ad-side left" id="ad-left">
+                        <button class="close-btn" onclick="hideAd('ad-left')">×</button>
+                        {% include iframe_side01.html %}
+                    </div>
+                    <div class="ad-side right" id="ad-right">
+                        <button class="close-btn" onclick="hideAd()">×</button>
+                        {% include iframe_side02.html %}
+                    </div>
+
+                  <iframe class="game-iframe iframe-container" id="game-area" src="https://unblockgamez.github.io/1ubl" 
                      style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
                </div>
                <div class="game-info">
@@ -58,7 +68,7 @@ imageurl: ":https://unblockgamez.github.io/play/images/1v1-lol.png"
                   <div class="post-body">
                      <div class="post-intro" style="font-size: x-large; text-align:justify">
                       <div class="post-intro">  
-            
+                        {% include ad_s1.html %}
                         <section>
                           <p>
                               <strong>1v1.LOL Unblocked</strong> is a thrilling online third-person shooter that combines high-octane action with strategic building mechanics. 
@@ -91,6 +101,7 @@ imageurl: ":https://unblockgamez.github.io/play/images/1v1-lol.png"
                               The game also offers customizable controls, enabling you to tailor the setup to your unique playstyle. 
                               Whether you're testing your reflexes or strategizing for your next move, <strong>1v1.LOL Unblocked</strong> provides an engaging platform for improving your skills and enjoying endless entertainment.
                           </p>
+                          {% include ad_s2.html %}
                       </section>
             
             </div>
@@ -101,58 +112,6 @@ imageurl: ":https://unblockgamez.github.io/play/images/1v1-lol.png"
          </div>
       </div>
       </div> <!-- end container -->
-      <div class="footer-copyright py-4">
-         <div class="container">
-            Unblockgamez    
-            <span class="dsb-panel">
-            <a href="/policy.html">Privacy Policy</a> |
-            <a href="/term.html">Terms of Use</a> |
-            <a href="/contact.html">Contact us</a>
-            </span>
-         </div>
-      </div>
-      <script>
-         document.addEventListener("DOMContentLoaded", function () {
-             fetch("../games.json") // Fetch JSON file
-                 .then(response => response.json())
-                 .then(games => {
-                     const container = document.getElementById("games-container");
-                     container.innerHTML = ""; // Clear existing content
- 
-                     games.slice(0, 6).forEach(game => { // Load only the first 6 games
-                         const gameHTML = `
-                             <div class="col-lg-2 col-md-4 col-6 grid-3">
-                                 <a href="${game.url}">
-                                     <div class="game-item">
-                                         <div class="list-game">
-                                             <div class="list-thumbnail">
-                                                 <img src="${game.image}" class="lazyload" alt="${game.name}" title="${game.name} Unblocked">
-                                                 <div class="list-title" style="text-align:center;">${game.name}</div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </a>
-                             </div>
-                         `;
-                         container.innerHTML += gameHTML;
-                     });
-                 })
-                 .catch(error => console.error("Error loading games:", error));
-         });
-     </script>
-     <script>
-      // Wait for the DOM to be fully loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        // Add event listener to the play button
-        document.getElementById('gamePlayButton').addEventListener('click', function() {
-          // Hide the overlay
-          document.querySelector('.game-overlay').style.display = 'none';
-    
-          // Show the iframe
-          document.getElementById('game-area').style.display = 'block';
-        });
-      });
-    </script>
-      <script type="text/javascript" src="../js/script.js"></script>
+      {% include footer.html %}
    </body>
 </html>

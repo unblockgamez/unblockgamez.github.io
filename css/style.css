@@ -793,3 +793,66 @@ input.form-control {
 #gamePlayButton:hover {
   background-color: #0056b3;
 }
+  /* Full-screen iframe */
+  .iframe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ad positions (without background) */
+.ad-top, .ad-side {
+    position: absolute;
+    padding: 0;
+    z-index: 10;
+    display: none; /* Initially hidden */
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Top Ad */
+.ad-top {
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+/* Left Ad */
+.ad-side.left {
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Right Ad */
+.ad-side.right {
+    width: 250px;
+    height: 100%;
+    top: 0;
+    right: 0;
+}

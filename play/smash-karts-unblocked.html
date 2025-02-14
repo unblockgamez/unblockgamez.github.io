@@ -13,17 +13,27 @@ imageurl: "../images/smash-karts-unblocked-icon.webp"
            <div class="row">
               <!-- Main Game Section (col-md-9) -->
               <div class="col-md-9">
-                 <div class="gamer-container">
-                    <!-- Ad Overlay -->
-                    <div class="game-overlay">
-                       <div class="game-ad">
-                          {% include ad_s7.html %}
-                       </div>
-                       <button id="gamePlayButton">Play Game</button>
+               <div class="gamer-container">
+                  <!-- Ad Overlay -->
+                  <div class="game-overlay">
+                     <div class="game-ad">
+                        {% include ad_s7.html %}
+                     </div>
+                     <button id="gamePlayButton">Play Game</button>
+                  </div>
+                   <!-- Left Ad -->
+                    <div class="ad-side left" id="ad-left">
+                        <button class="close-btn" onclick="hideAd('ad-left')">×</button>
+                        {% include iframe_side01.html %}
                     </div>
-                    <iframe class="game-iframe" id="game-area" src="https://webgltest-17af1.firebaseapp.com" 
-                       style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-                 </div>
+                    <div class="ad-side right" id="ad-right">
+                        <button class="close-btn" onclick="hideAd()">×</button>
+                        {% include iframe_side02.html %}
+                    </div>
+
+                  <iframe class="game-iframe iframe-container" id="game-area" src="https://webgltest-17af1.firebaseapp.com" 
+                     style="display: none;" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+               </div>
                  <div class="game-info">
                     <div class="header-left">
                         <h1 class="single-title">Smash Karts Unblocked</h1>
@@ -60,7 +70,7 @@ imageurl: "../images/smash-karts-unblocked-icon.webp"
                  <div class="post-body">
                     <div class="post-intro" style="text-align:justify">
                         <h2>Smash Karts Unblocked – Race & Battle Online!</h2>
-
+                        {% include ad_s1.html %}
 <p>Get ready for action-packed kart racing with <strong>Smash Karts Unblocked</strong>! This thrilling multiplayer game lets you race against players worldwide while using weapons and power-ups to take down opponents. Play for free without restrictions and prove your racing skills!</p>
 
 <h3>Features of Smash Karts Unblocked</h3>
@@ -80,7 +90,7 @@ imageurl: "../images/smash-karts-unblocked-icon.webp"
     <li>Outmaneuver enemies and avoid getting hit.</li>
     <li>Dominate the arena and climb the leaderboard!</li>
 </ol>
-
+{% include ad_s2.html %}
 <p>Experience the ultimate kart battle in <strong>Smash Karts Unblocked</strong>. Play now and race your way to victory!</p>
 
                     </div>
