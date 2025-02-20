@@ -856,3 +856,8 @@ input.form-control {
     top: 0;
     right: 0;
 }
+@media (max-width: 768px) {
+  .ad-side.left ,.ad-side.right {
+      display: none;
+  }
+}
